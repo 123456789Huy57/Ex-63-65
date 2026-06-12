@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Member Registration</title>
+        <style>
+            @import url("css/maincss.css");
+        </style>
+        <script src="js/dataset.js"></script>
+        <script src="js/mainjs.js"></script>
+    </head>
+    <body>
+        <form name="myform">
+            <table border="1">
+                <tr>
+                    <td colspan="2">Member Registration</td>
+                </tr>
+                <tr>
+                    <td>Name(*)</td>
+                    <td><input type="text" name="fullname" id="fullname"></td>
+                </tr>
+                <tr>
+                    <td>Birthday(*)</td>
+                    <td>
+                        Day: <select name="day" id="day"></select>
+                        Month: <select name="month" id="month"></select>
+                        Year: <select name="year" id="year"></select>
+                    </td>
+                </tr>
+                <Tr>
+                    <td>Gender(*)</td>
+                    <td>
+                        <input type="radio" name="gender" value="Man" checked> Man
+                        <input type="radio" name="gender" value="Woman"> Woman
+                    </td>
+                </Tr>
+                <tr>
+                    <td>Email(*)</td>
+                    <td><input type="text" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Your favorite:</td>
+                    <td>
+                        <input type="checkbox" name="hobby" value="Shopping" checked> Shopping<br>
+                        <input type="checkbox" name="hobby" value="Tourism" checked> Tourism<br>
+                        <input type="checkbox" name="hobby" value="Chat" checked> Chat<br>
+                        <input type="checkbox" name="hobby" value="Read a book" checked> Read a book<br>
+                        <input type="checkbox" name="hobby" value="Listening to music" checked> Listening to music
+                    </td>
+                </tr>
+                <tr>
+                    <td>Your favorite color:</td>
+                    <td>
+                        <input type="radio" name="color" value="Blue" checked> Blue<br>
+                        <input type="radio" name="color" value="Red"> Red<br>
+                        <input type="radio" name="color" value="Yellow"> Yellow<br>
+                        <input type="radio" name="color" value="Green"> Green<br>
+                        <input type="radio" name="color" value="Violet"> Violet
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    <button type="button" onclick="registerMember()">Sign up</button>
+                    <button type="button" onclick="resetForm()">Reset</button>
+                    <button type="button" onclick="nextForm()">Next</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="message"></td>
+                </tr>
+            </table>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Birthday</th>
+                        <th>Hobbies</th>
+                        <th>Colors</th>
+                    </tr>
+                </thead>
+                <tbody id="memberBody"></tbody>
+            </table>
+        </form>
+        <script>
+            initPage()
+        </script>
+    </body>
+</html>
