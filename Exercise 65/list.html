@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Dynamic List</title>
+        <style>
+            @import url("css/maincss.css");
+        </style>
+        <script src="js/dataset.js"></script>
+        <script src="js/mainjs.js"></script>
+    </head>
+    <body>
+        <form name="myform">
+            <table border="1">
+                <tr>
+                    <td><button type="button" onclick="addNode()">Add Node</button></td>
+                    <td>Content <input type="text" name="content" id="content"></td>
+                    <td>Position <input type="text" name="addPosition" id="addPosition"></td>
+                </tr>
+                <Tr>
+                    <td><button type="button" onclick="removeNode()">Remove Node</button></td>
+                    <td>Position <input type="text" name="removePosition" id="removePosition"></td>
+                    <td></td>
+                </Tr>
+                <tr>
+                    <td><button type="button" onclick="modifyNode()">Modify Node</button></td>
+                    <td>New Content <input type="text" name="newContent" id="newContent"></td>
+                    <td>Position <input type="text" name="modifyPosition" id="modifyPosition"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                    Web Node
+                    <div id="webNodeDiv">
+                        <ul id="webNode"></ul>
+                    </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            loadWebNode()
+        </script>
+    </body>
+</html>
